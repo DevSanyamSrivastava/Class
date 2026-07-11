@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bootstrap Form Example</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body>
+
+<div class="container my-5">
+
+    <div class="card shadow">
+
+        <div class="card-header bg-primary text-white">
+            <h3 class="text-center">Student Registration Form</h3>
+        </div>
+
+        <div class="card-body">
+
+            <form>
+
+                <!-- 4 Inputs in One Row -->
+
+                <div class="row mb-3">
+
+                    <div class="col-lg-3 col-md-6">
+                        <label class="form-label">First Name</label>
+                        <input type="text" class="form-control">
+                    </div>
+
+                    <div class="col-lg-3 col-md-6">
+                        <label class="form-label">Last Name</label>
+                        <input type="text" class="form-control">
+                    </div>
+
+                    <div class="col-lg-3 col-md-6">
+                        <label class="form-label">Age</label>
+                        <input type="number" class="form-control">
+                    </div>
+
+                    <div class="col-lg-3 col-md-6">
+                        <label class="form-label">DOB</label>
+                        <input type="date" class="form-control">
+                    </div>
+
+                </div>
+
+
+                <!-- 3 Inputs in One Row -->
+
+                <div class="row mb-3">
+
+                    <div class="col-lg-4">
+                        <label class="form-label">Email</label>
+                        <input type="email" class="form-control">
+                    </div>
+
+                    <div class="col-lg-4">
+                        <label class="form-label">Mobile</label>
+                        <input type="tel" class="form-control">
+                    </div>
+
+                    <div class="col-lg-4">
+                        <label class="form-label">Password</label>
+                        <input type="password" class="form-control">
+                    </div>
+
+                </div>
+
+
+                <!-- 2 Inputs in One Row -->
+
+                <div class="row mb-3">
+
+                    <div class="col-lg-6">
+                        <label class="form-label">City</label>
+
+                        <select class="form-select">
+                            <option>Select City</option>
+                            <option>Lucknow</option>
+                            <option>Delhi</option>
+                            <option>Kanpur</option>
+                            <option>Mumbai</option>
+                        </select>
+
+                    </div>
+
+                    <div class="col-lg-6">
+                        <label class="form-label">State</label>
+
+                        <select class="form-select">
+                            <option>Select State</option>
+                            <option>Uttar Pradesh</option>
+                            <option>Maharashtra</option>
+                            <option>Delhi</option>
+                        </select>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Radio Buttons -->
+
+                <div class="mb-3">
+
+                    <label class="form-label">Gender</label>
+
+                    <div>
+
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="gender">
+                            <label class="form-check-label">Male</label>
+                        </div>
+
+                        <div class="form-check ">
+                            <input class="form-check-input" type="radio" name="gender">
+                            <label class="form-check-label">Female</label>
+                        </div>
+
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="gender">
+                            <label class="form-check-label">Other</label>
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Checkboxes -->
+
+                <div class="mb-3">
+
+                    <label class="form-label">Skills</label>
+
+                    <div class="row">
+
+                        <div class="col-md-3">
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox">
+                                <label class="form-check-label">HTML</label>
+                            </div>
+                        </div>
+
+                        <div class="col-md-3">
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox">
+                                <label class="form-check-label">CSS</label>
+                            </div>
+                        </div>
+
+                        <div class="col-md-3">
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox">
+                                <label class="form-check-label">Bootstrap</label>
+                            </div>
+                        </div>
+
+                        <div class="col-md-3">
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox">
+                                <label class="form-check-label">JavaScript</label>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- File Upload -->
+
+                <div class="mb-3">
+
+                    <label class="form-label">Upload Resume</label>
+
+                    <input type="file" class="form-control">
+
+                </div>
+
+
+                <!-- Textarea -->
+
+                <div class="mb-3">
+
+                    <label class="form-label">Address</label>
+
+                    <textarea class="form-control" rows="4"></textarea>
+
+                </div>
+
+
+                <!-- Buttons -->
+
+                <div class="text-center">
+
+                    <button class="btn btn-success px-5">Submit</button>
+
+                    <button type="reset" class="btn btn-danger px-5">Reset</button>
+
+                </div>
+
+            </form>
+
+        </div>
+
+    </div>
+
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>

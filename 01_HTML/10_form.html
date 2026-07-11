@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <style>
+  .form-container{
+      height: 600px;
+      width: 300px;
+      border: 5px solid black;
+      padding: 10px 0px 0px 50px;
+      margin-left:250px; 
+      border-radius:20px;
+      background:grey;
+  }
+  h4{
+     margin:0 0 0 330px; 
+     font-size: 60px;
+     color: green;
+   
+  }
+  label{
+    font-size:20px;
+    margin-bottom: 10px;
+    
+  }
+
+  input{
+    border:3px solid rgb(25, 6, 6);
+    border-radius: 10px;
+  }
+  select{
+    border-radius: 20px;
+    color:blue;
+    background-color: rgb(147, 214, 214);
+  }
+
+  button{
+    margin:10px 0 0 70px;
+    height: 40px;
+    width: 80px;
+    border: 2px solid black;
+    border-radius:15px;
+    background-color:#262626 ;
+    color:white;
+    cursor: pointer;
+    font-size: 12px;
+  }
+  button:hover{
+    margin:10px 0 0 70px;
+    height: 40px;
+    width: 80px;
+    border: 2px solid black;
+    border-radius:15px;
+    color:#262626 ;
+    background-color:white;
+    cursor: pointer;
+    font-size: 15px;
+  }
+  
+    </style>
+    <title>Document</title>
+  </head>
+  <body>
+    <h4>Form</h4>
+    <div class="form-container">
+      
+    <form method="" action="">
+      <label for="name">Student Name:</label> <br />
+
+      <input type="text" name="" id="" /> <br />
+      <label>Email</label> <br />
+      <input type="email" name="name" id="" /> <br />
+      Mobile No. <br />
+      <input type="number" name="tel" id="" /> <br />
+      Password <br />
+
+      <input type="password" name="password" /> <br />
+      <label>Upoad Image</label> <br />
+      <input type="file" id="" name="" /> <br />
+
+      <!-- Radio button  -->
+      <label>Gender</label> <br>
+
+      <label>
+        <input type="radio" id="" name="gender" value="Male" />Male
+      </label>
+
+      <label>
+        <input type="radio" id="" name="gender" value="Female" />Female
+      </label>
+
+      <label>
+        <input type="radio" id="" name="gender" value="Other" />Other
+      </label>
+      <br />
+
+      <!-- dropown  -->
+      <label for="country">Country</label> <br>
+
+      <select name="country" id="">
+        <option value="">----Select Coutry--</option>
+        <option value="India">India</option>
+        <option value="Pakistan">Pakistan</option>
+        <option value="Germany">Germany</option>
+        <option value="England">England</option>
+        <option value="Sri Lanka">Sri Lanka</option>
+      </select>
+<br>
+<br>
+      <!-- cheack-box  -->
+      <label for=""> Qualifications</label> <br>
+      <label>
+        <input type="checkbox" name="quali" id="" value="10th" />10th
+      </label> <br>
+      <label><input type="checkbox" name="quali" id="" value="12th" />12th  </label> <br>
+      <label>
+        <input  type="checkbox" name="quali"  id=""  value="Diploma" />Diploma</label > <br>
+      <label>
+        <input type="checkbox" name="quali" id="" value="B Tech" />B Tech</label
+      > <br>
+      <label>
+        <input type="checkbox" name="quali" id="" value="M Tech" />M Tech
+      </label> <br>
+      <label>
+        <input type="checkbox" name="quali" id="" value="Ph.D" />B.A</label
+      > <br>
+
+      <label for="">Decription</label>
+      <textarea name="" id="" cols="10" rows="4"></textarea>
+
+      <button>Submmit</button>
+    </form>
+    </div>
+  </body>
+</html>
