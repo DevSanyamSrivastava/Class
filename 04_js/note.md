@@ -33,4 +33,23 @@ Data Type
         Do not use numbers in start of variable.
         Do not use predefined values or Reserved keyword.
         The variables are case sensitive eg: userName, Username, UserName are different variable
-        Do not use space, @ between variable name.           
+        Do not use space, @ between variable name.  
+
+    Keyword in js 
+        abstract	arguments	async *	await *
+        boolean	break	byte	case
+        catch	char	class *	const *
+        continue	debugger	default	delete
+        do	double	else	enum *
+        eval	export *	extends *	false
+        final	finally	float	for
+        function	goto	if	implements
+        function	import *	in	instanceof
+        int	interface	let *	long
+        native	new	null	package
+        private	protected	public *	return
+        short	static *	super *	switch
+        synchronized	this	throw	throws
+        transient	true	try	typeof
+        using *	var	void	volatile
+        while	with	yield                 
