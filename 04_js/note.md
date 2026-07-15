@@ -52,4 +52,22 @@ Data Type
         synchronized	this	throw	throws
         transient	true	try	typeof
         using *	var	void	volatile
-        while	with	yield                 
+        while	with	yield       
+
+
+
+
+        Task
+object create
+keys 
+    companyName
+    industry
+    department
+        name
+        location
+        manager
+            name
+            employeeId
+            contact
+                email
+                phone
