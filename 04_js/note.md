@@ -1,77 +1,157 @@
-JavaScript was invented by Brendan Eich in May 1995 while working at Netscape Communications Corporation.
-ECMAScript (ES) is the official standard and specification for JavaScript.
+# JavaScript Notes
 
-The Real Life Analogy of web design..
-    The Human Body  
-        HTML (The Skeleton)
-        CSS (The Appearance)
-        JavaScript (The Muscles & Nervous System)
+## Introduction
 
+- **JavaScript** was invented by **Brendan Eich** in **May 1995** while working at **Netscape Communications Corporation**.
+- **ECMAScript (ES)** is the official standard and specification for JavaScript.
 
-----------------------------------------
-Variable-->
-    Variables is a named storage location in a computer memory that hold a value or data.
+---
 
-    Variables is like a container which store data.
+# Real-Life Analogy of Web Design
 
+Think of a website like the human body:
 
-Data Type
-    Primitive
-        Null
-        Number
-        Boolean
-        BigInt
-        String
-        Symbol
-        Undefined
+| Technology | Human Body Analogy | Purpose |
+|------------|--------------------|---------|
+| **HTML** | Skeleton | Provides the structure of the webpage |
+| **CSS** | Appearance | Adds styling and design |
+| **JavaScript** | Muscles & Nervous System | Adds functionality and interactivity |
 
-    Non-Primitive
-        Object    
+---
 
- Variable Define Rules
-        Do not use special character
-        Do not use numbers in start of variable.
-        Do not use predefined values or Reserved keyword.
-        The variables are case sensitive eg: userName, Username, UserName are different variable
-        Do not use space, @ between variable name.  
+# Variables
 
-    Keyword in js 
-        abstract	arguments	async *	await *
-        boolean	break	byte	case
-        catch	char	class *	const *
-        continue	debugger	default	delete
-        do	double	else	enum *
-        eval	export *	extends *	false
-        final	finally	float	for
-        function	goto	if	implements
-        function	import *	in	instanceof
-        int	interface	let *	long
-        native	new	null	package
-        private	protected	public *	return
-        short	static *	super *	switch
-        synchronized	this	throw	throws
-        transient	true	try	typeof
-        using *	var	void	volatile
-        while	with	yield       
+A **variable** is a named storage location in computer memory that stores a value or data.
 
+> Variables are like containers used to store data.
 
+### Example
 
+```javascript
+let name = "John";
+let age = 25;
+```
 
-        Task
-object create
-keys 
-    companyName
-    industry
-    department
-        name
-        location
-        manager
-            name
-            employeeId
-            contact
-                email
-                phone
+---
 
+# Data Types
+
+## 1. Primitive Data Types
+
+- `null`
+- `number`
+- `boolean`
+- `bigint`
+- `string`
+- `symbol`
+- `undefined`
+
+## 2. Non-Primitive Data Type
+
+- `object`
+
+---
+
+# Variable Naming Rules
+
+- ✅ Do not use special characters.
+- ✅ Do not start a variable name with a number.
+- ✅ Do not use reserved keywords.
+- ✅ Variable names are case-sensitive.
+
+Example:
+
+```javascript
+userName
+Username
+UserName
+```
+
+These are **three different variables**.
+
+- ✅ Do not use spaces.
+
+❌ Invalid:
+
+```javascript
+user name
+user@name
+```
+
+✅ Valid:
+
+```javascript
+userName
+user_name
+userName123
+```
+
+---
+
+# JavaScript Reserved Keywords
+
+```text
+abstract     arguments     async*        await*
+boolean      break         byte          case
+catch        char          class*        const*
+continue     debugger      default       delete
+do           double        else          enum*
+eval         export*       extends*      false
+final        finally       float         for
+function     goto          if            implements
+import*      in            instanceof    int
+interface    let*          long          native
+new          null          package       private
+protected    public*       return        short
+static*      super*        switch        synchronized
+this         throw         throws        transient
+true         try           typeof        using*
+var          void          volatile      while
+with         yield
+```
+
+> **Note:** Keywords marked with `*` are introduced in newer versions of ECMAScript.
+
+---
+
+# Task
+
+Create the following object structure in JavaScript.
+
+## Required Keys
+
+- `companyName`
+- `industry`
+- `department`
+  - `name`
+  - `location`
+  - `manager`
+    - `name`
+    - `employeeId`
+    - `contact`
+      - `email`
+      - `phone`
+
+## Expected Object Structure
+
+```javascript
+const company = {
+  companyName: "",
+  industry: "",
+  department: {
+    name: "",
+    location: "",
+    manager: {
+      name: "",
+      employeeId: "",
+      contact: {
+        email: "",
+        phone: ""
+      }
+    }
+  }
+};
+```
 
  # JavaScript Operators
 
