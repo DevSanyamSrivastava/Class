@@ -3,7 +3,7 @@
 let student ={
     "id" :1,
     "name" : "Sanyam",
-    "class" :10,
+    "class" :0,
     "Roll_No" : 34,
     "address" : {
         "City" : "lmp",
