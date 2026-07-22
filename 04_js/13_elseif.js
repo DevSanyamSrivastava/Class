@@ -49,3 +49,7 @@ if(age<=0 || age>100){
 // If income is between ₹1,00,000 and ₹1,99,999, print "Upper High Income".
 // If income is between ₹2,00,000 and ₹4,99,999, print "Rich".
 // If income is ₹5,00,000 or more, print "Luxury Income".
+
+
+//cheack no is divide of 5 or 2
+//cheack no is divide of 5 and  2
