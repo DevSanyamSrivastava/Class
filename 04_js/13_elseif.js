@@ -39,7 +39,7 @@ if(age<=0 || age>100){
 }else if(age>=19 && age<=60){
     console.log("You are eligible")
 }else{
-    console.log("you are overage")
+    console.log("you are average")
 }
 
 
