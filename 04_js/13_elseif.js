@@ -31,16 +31,16 @@
 // 19 to 60 --> you are eligible
 // 60 too 100 -->you are overage
 
-let age = 80
-if(age<=0 || age>100){
-    console.log("Enter valid age")
-}else if(age>=1 && age<=18){
-    console.log("You are underage")
-}else if(age>=19 && age<=60){
-    console.log("You are eligible")
-}else{
-    console.log("you are average")
-}
+// let age = 80
+// if(age<=0 || age>100){
+//     console.log("Enter valid age")
+// }else if(age>=1 && age<=18){
+//     console.log("You are underage")
+// }else if(age>=19 && age<=60){
+//     console.log("You are eligible")
+// }else{
+//     console.log("you are average")
+// }
 
 
 // If income is less than ₹20,000, print "Eligible for Government Support".
@@ -50,6 +50,14 @@ if(age<=0 || age>100){
 // If income is between ₹2,00,000 and ₹4,99,999, print "Rich".
 // If income is ₹5,00,000 or more, print "Luxury Income".
 
-
+// 30
 //cheack no is divide of 5 or 2
 //cheack no is divide of 5 and  2
+// let num =83
+// if(num%5==0 || num%2==0){
+//     console.log("your number is", num, "divide by 5 or 2" )
+// }
+// else{
+//       console.log("your number is not", num, "divide by 5 or 2" )  
+// }
+
