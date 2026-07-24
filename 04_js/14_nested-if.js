@@ -28,6 +28,7 @@
 
 // }
 
+// 
 
 // task 
 
@@ -49,11 +50,52 @@
 // Else, print "Eligible with medical approval."
 
 
-// let fname=prompt("Enter first name")
-// let lname=prompt("Enter last name")
-// alert("Welcome "+fname+ " "+lname)
+let age = prompt("Enter your age");   
+let weight = prompt("Enter your weight (IN KG )");
+
+if(age<18){
+    alert("Not eligible: underage")
+}else if(age>=18 && age<=25){
+    if(weight>=0 && weight<=50){
+        alert("your age " +age+  " years and weight is "+weight+" kg You are underweight")
+    }
+    else if(weight>50 && weight<=70){
+        alert("your age " +age+  " years and weight is "+weight+" kg You are eligible")
+    }
+    else {
+        alert("your age " +age+  " years and weight is "+weight+" kg You are overweight")
+    }
+
+}else if(age>=26 && age<=40){
+    if(weight>=0 && weight<=55){
+        alert("your age " +age+  " years and weight is "+weight+" kg You are underweight")
+    }
+    else if(weight>55 && weight<=80){
+        alert("your age " +age+  " years and weight is "+weight+" kg You are eligible")
+    }
+    else {
+        alert("your age " +age+  " years and weight is "+weight+" kg You are overweight")
+    }
+
+}else if(age>=41 && age<=60){
+    if(weight>=0 && weight<=60){
+        alert("your age " +age+  " years and weight is "+weight+" kg You are underweight")
+    }
+    else if(weight>60 && weight<=85){
+        alert("your age " +age+  " years and weight is "+weight+" kg You are eligible")
+    }
+    else {
+        alert("your age " +age+  " years and weight is "+weight+" kg You are overweight")
+    }
+}
+else{
+      if(weight>=0 && weight<=50){
+        alert("your age " +age+  " years and weight is "+weight+" kg Consult a doctor before joining")
+    }
+    else{
+         alert("your age " +age+  " years and weight is "+weight+" kg Eligible with medical approval.")
+    }
+}
 
 
-let fname="Sanyam"
-let lname="Srivastava"
-console.log("Welcome "+fname+ " "+lname)
+
