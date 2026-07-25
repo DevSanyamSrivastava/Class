@@ -10,6 +10,20 @@
 //     console.log(2*i+1)
 // }
 
+//init--->condition-----True---->execute----itrate
+
+// 2*1=2
+// 2*2=4
+// 2*3=6
+// ..
+// ...
+// 2*10=20
 
 
-console.log(`I am Sanyam He says "We done good work" 'We all good'`)
+// for(i=1; i<=10; i++){
+//     console.log("2 * "+i+ " = "+ 2*i)
+// }
+for(i=1; i<=10; i++){
+    console.log(`2 * ${i} = ${2*i}`)
+}
+
