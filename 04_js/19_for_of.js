@@ -16,6 +16,6 @@
 //     console.log(world)
 // }
 
-//WAP to print Prime Number between 1 to 100
+
 
 
