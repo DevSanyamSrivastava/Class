@@ -312,4 +312,422 @@ console.log(result);
   Ternary               `condition ? value1 : value2`
 
 
-Pull request check
+# DOM Manipulation Basics
+
+---
+
+## 1. getElementById()
+
+Selects a single element using its **id**.
+
+### HTML
+
+```html
+<h1 id="title">Hello</h1>
+```
+
+### JavaScript
+
+```javascript
+const heading = document.getElementById("title");
+
+heading.innerText = "Welcome";
+```
+
+---
+
+## 2. getElementsByClassName()
+
+Selects all elements with the same **class**.
+
+### HTML
+
+```html
+<p class="text">One</p>
+<p class="text">Two</p>
+<p class="text">Three</p>
+```
+
+### JavaScript
+
+```javascript
+const para = document.getElementsByClassName("text");
+
+para[0].innerText = "Hello";
+```
+
+---
+
+## 3. innerHTML
+
+Used to get or set **HTML content**.
+
+### HTML
+
+```html
+<div id="box"></div>
+```
+
+### JavaScript
+
+```javascript
+document.getElementById("box").innerHTML = "<h1>Hello</h1>";
+```
+
+---
+
+## 4. innerText
+
+Used to get or set **visible text**.
+
+### JavaScript
+
+```javascript
+document.getElementById("title").innerText = "Welcome";
+```
+
+---
+
+## 5. textContent
+
+Gets all text, including hidden text.
+
+### HTML
+
+```html
+<div id="box">
+    Hello
+    <span style="display:none;">World</span>
+</div>
+```
+
+### JavaScript
+
+```javascript
+const box = document.getElementById("box");
+
+console.log(box.textContent);
+```
+
+---
+
+## 6. querySelector()
+
+Returns the **first matching element**.
+
+### Select by ID
+
+```html
+<h1 id="title">Hello</h1>
+```
+
+```javascript
+const heading = document.querySelector("#title");
+
+heading.style.color = "red";
+```
+
+### Select by Class
+
+```html
+<p class="text">Hello</p>
+```
+
+```javascript
+const para = document.querySelector(".text");
+
+para.style.color = "blue";
+```
+
+---
+
+## 7. querySelectorAll()
+
+Returns **all matching elements**.
+
+### HTML
+
+```html
+<p class="text">One</p>
+<p class="text">Two</p>
+<p class="text">Three</p>
+```
+
+### JavaScript
+
+```javascript
+const para = document.querySelectorAll(".text");
+
+for (let i = 0; i < para.length; i++) {
+    para[i].style.color = "green";
+}
+```
+
+---
+
+# Event Listener
+
+`addEventListener()` is used to perform an action when an event occurs (click, input, keypress, etc.).
+
+### Example: Change Background Color
+
+```html
+<!DOCTYPE html>
+<html>
+<body>
+
+<button id="red">Red</button>
+<button id="blue">Blue</button>
+<button id="green">Green</button>
+<button id="purple">Purple</button>
+
+<script>
+
+document.getElementById("red").addEventListener("click", function () {
+    document.body.style.backgroundColor = "red";
+});
+
+document.getElementById("blue").addEventListener("click", function () {
+    document.body.style.backgroundColor = "blue";
+});
+
+document.getElementById("green").addEventListener("click", function () {
+    document.body.style.backgroundColor = "green";
+});
+
+document.getElementById("purple").addEventListener("click", function () {
+    document.body.style.backgroundColor = "purple";
+});
+
+</script>
+
+</body>
+</html>
+```
+
+---
+
+## Syntax
+
+```javascript
+element.addEventListener("event", function () {
+    // Code to execute
+});
+```
+
+### Common Events
+
+- `click`
+- `dblclick`
+- `mouseover`
+- `mouseout`
+- `keydown`
+- `keyup`
+- `input`
+- `change`
+- `submit`
+- `focus`
+- `blur`
+
+
+# Common DOM Events
+
+---
+
+## 1. click
+
+Runs when an element is clicked.
+
+```html
+<button id="btn">Click Me</button>
+
+<script>
+document.getElementById("btn").addEventListener("click", function () {
+    alert("Button Clicked");
+});
+</script>
+```
+
+---
+
+## 2. dblclick
+
+Runs when an element is double-clicked.
+
+```html
+<button id="btn">Double Click</button>
+
+<script>
+document.getElementById("btn").addEventListener("dblclick", function () {
+    alert("Double Clicked");
+});
+</script>
+```
+
+---
+
+## 3. mouseover
+
+Runs when the mouse enters an element.
+
+```html
+<div id="box">Hover Me</div>
+
+<script>
+document.getElementById("box").addEventListener("mouseover", function () {
+    this.style.backgroundColor = "yellow";
+});
+</script>
+```
+
+---
+
+## 4. mouseout
+
+Runs when the mouse leaves an element.
+
+```html
+<div id="box">Move Mouse Away</div>
+
+<script>
+document.getElementById("box").addEventListener("mouseout", function () {
+    this.style.backgroundColor = "white";
+});
+</script>
+```
+
+---
+
+## 5. keydown
+
+Runs when a key is pressed.
+
+```html
+<input id="name" placeholder="Type">
+
+<script>
+document.getElementById("name").addEventListener("keydown", function () {
+    console.log("Key Pressed");
+});
+</script>
+```
+
+---
+
+## 6. keyup
+
+Runs when a pressed key is released.
+
+```html
+<input id="name" placeholder="Type">
+
+<script>
+document.getElementById("name").addEventListener("keyup", function () {
+    console.log(this.value);
+});
+</script>
+```
+
+---
+
+## 7. input
+
+Runs whenever the input value changes.
+
+```html
+<input id="name" placeholder="Type">
+
+<script>
+document.getElementById("name").addEventListener("input", function () {
+    console.log(this.value);
+});
+</script>
+```
+
+---
+
+## 8. change
+
+Runs when the value changes and loses focus.
+
+```html
+<input id="name">
+
+<script>
+document.getElementById("name").addEventListener("change", function () {
+    alert(this.value);
+});
+</script>
+```
+
+---
+
+## 9. submit
+
+Runs when a form is submitted.
+
+```html
+<form id="form">
+    <input>
+    <button>Submit</button>
+</form>
+
+<script>
+document.getElementById("form").addEventListener("submit", function(event) {
+
+    event.preventDefault();
+
+    alert("Form Submitted");
+});
+</script>
+```
+
+---
+
+## 10. focus
+
+Runs when an input gets focus.
+
+```html
+<input id="name">
+
+<script>
+document.getElementById("name").addEventListener("focus", function () {
+    this.style.backgroundColor = "lightyellow";
+});
+</script>
+```
+
+---
+
+## 11. blur
+
+Runs when an input loses focus.
+
+```html
+<input id="name">
+
+<script>
+document.getElementById("name").addEventListener("blur", function () {
+    this.style.backgroundColor = "white";
+});
+</script>
+```
+
+---
+
+# Most Used Events
+
+| Event | When It Runs |
+|--------|--------------|
+| `click` | User clicks an element |
+| `dblclick` | User double-clicks |
+| `mouseover` | Mouse enters element |
+| `mouseout` | Mouse leaves element |
+| `keydown` | Key is pressed |
+| `keyup` | Key is released |
+| `input` | Input value changes |
+| `change` | Value changes and focus leaves |
+| `submit` | Form is submitted |
+| `focus` | Input gets focus |
+| `blur` | Input loses focus |

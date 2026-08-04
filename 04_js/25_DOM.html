@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- <button
+      onclick="alert('Hello world')" 
+      style="
+        border: 2px solid black;
+        height: 30px;
+        width: 100px;
+        border-radius: 15px;
+        font-weight: 600;
+        color: rgb(32, 36, 1);
+        background: rgb(189, 150, 233);
+      "
+    >
+      Click Me
+    </button> -->
+    <button
+        id="btn"
+      onclick="btnClick()" 
+      style="
+        border: 2px solid black;
+        height: 30px;
+        width: 100px;
+        border-radius: 15px;
+        font-weight: 600;
+        color: rgb(32, 36, 1);
+        background: rgb(189, 150, 233);
+      "
+    >
+      Click Me <span style="display: none;">I am good</span>
+    </button>
+  </body>
+  <script>
+    // const mybtn = () => {
+    //   alert("btn is clicked");
+    // };
+
+    const btnClick=()=>{
+
+        // document.getElementById('btn').innerHTML='<h1>Clikced</h1>'
+              // document.getElementById('btn').textContent
+        document.getElementById('btn').innerText='Clikced'
+        document.querySelector('#btn').style.color='green'
+        document.querySelector('#btn').style.backgroundColor='yellow'
+        
+
+    }
+  </script>
+
+
+</html>
