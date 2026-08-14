@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3 id="counter">0</h3>
+    <h2 id="coun2">Cart:0</h2>
+    <button onclick="increse()">Increse</button>
+    <button onclick="decrese()">Decrese</button>
+
+    <script>
+        let count=10;
+        const increse=()=>{
+            count++
+          document.getElementById('counter').innerText=count
+          document.getElementById('coun2').innerHTML=`Carts:${count}`
+        }
+
+       const decrese=()=>{
+            count--
+            console.log(count)
+             document.getElementById('counter').innerText=count
+               document.getElementById('coun2').innerText=count
+        }
+    </script>
+</body>
+</html>
