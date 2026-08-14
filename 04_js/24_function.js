@@ -37,7 +37,7 @@
 // }
 
 // const functionName=(fName, lname)=>{
-//     console.log(`My name is ${fName} ${lname}`)
+    // console.log(`My name is ${fName} ${lname}`)
 // }
 
 //  functionName("Sanyam", "Srivastava")
