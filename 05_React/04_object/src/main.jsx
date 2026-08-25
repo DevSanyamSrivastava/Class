@@ -2,11 +2,12 @@ import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 import './index.css'
 
-import Country from './components/Country'
 
+import Capital from './components/Capital'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-<Country/>
+
+<Capital/>
   </StrictMode>,
 )
