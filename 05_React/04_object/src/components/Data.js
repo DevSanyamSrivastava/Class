@@ -1,5 +1,4 @@
-
-   [
+ [
     {
       "name": "Afghanistan",
       "code": "AF",

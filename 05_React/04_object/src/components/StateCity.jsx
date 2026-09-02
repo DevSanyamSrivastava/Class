@@ -28,7 +28,7 @@ const StateCity = () => {
     const selectedData = stateData.find(
       (item) => item.state === selectedState
     );
-
+console.log("My data ",selectedData);
     if (selectedData) {
       setCities(selectedData.cities);
     } else {
