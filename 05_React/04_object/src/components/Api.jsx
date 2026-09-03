@@ -1,12 +1,14 @@
 import React, { useEffect, useState } from "react";
+import "./api.css";
 
 const Api = () => {
   const [articles, setArticles] = useState([]);
+
   useEffect(() => {
     const getArticles = async () => {
       try {
         const response = await fetch(
-          "https://noozra.com/api/articles?category=sports&limit=5",
+          "https://noozra.com/api/articles?category=sports&limit=5"
         );
 
         const data = await response.json();
@@ -20,22 +22,27 @@ const Api = () => {
   }, []);
 
   return (
-    <>
-      <h1>Articles</h1>
+    <div className="articles-container">
+      <h1>Sports Articles</h1>
+
       {articles.map((allArticle) => (
-        <>
-          <p>{allArticle.headline}</p>
-          <a href={allArticle.url} target="_blank">
-            Click here to see full article
-          </a>
+        <div className="article-card">
           <img
             src={allArticle.image_url}
-            alt=""
-            height={allArticle.image_height}
+            alt={allArticle.headline}
+            className="article-image"
           />
-        </>
+
+          <div className="article-content">
+            <h2>{allArticle.headline}</h2>
+
+            <a href={allArticle.url} target="_blank" rel="noreferrer">
+              Click here to see full article →
+            </a>
+          </div>
+        </div>
       ))}
-    </>
+    </div>
   );
 };
 
