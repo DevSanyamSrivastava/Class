@@ -49,3 +49,15 @@
 .article-content a:hover {
   text-decoration: underline;
 }
+
+.btn {
+  height: 30px;
+  width: 70px;
+  margin-right: 2%;
+  margin-bottom: 1%;
+  border: 2px solid #f2ebeb;
+  border-radius: 50%;
+  background: linear-gradient(to right, #2b5876 0%, #4e4376 51%, #2b5876 100%);
+  color: white;
+  font-size: 10px;
+}
