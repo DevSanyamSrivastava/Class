@@ -2,6 +2,8 @@ import React, { useEffect, useState } from "react";
 import "./api.css";
 
 const Api = () => {
+  //conditioning rendering 
+  const[error, setIsError]=useState(false)
   const [category, setCategory] = useState("tech");
   const [articles, setArticles] = useState([]);
   // const opinionFn=()=>{
@@ -20,8 +22,10 @@ const Api = () => {
 
         const data = await response.json();
         setArticles(data.articles);
+          setIsError(false)
       } catch (error) {
-        console.log(error);
+        console.log("error is", error);
+        setIsError(true)
       }
     };
 
@@ -65,7 +69,11 @@ const Api = () => {
         Entertainment
       </button>
 
-      {articles.map((allArticle) => (
+      
+{error ? (<h1>Not found</h1>)
+ : (  
+  <>
+  {articles.map((allArticle) => (
         <div className="article-card">
           <img
             src={allArticle.image_url}
@@ -82,6 +90,9 @@ const Api = () => {
           </div>
         </div>
       ))}
+      </>
+  )}
+
     </div>
   );
 };
