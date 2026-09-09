@@ -6,7 +6,8 @@ const Layout=()=>{
     return(
         <>
         <MasterHeader/>
-        <Outlet/>
+        {/* placeholder */}
+        <Outlet/>  
         <MasterFooter/>
         </>
     )
