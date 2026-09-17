@@ -3,7 +3,7 @@ import Country from '../components/Country'
 const Home = () => {
   return (
     <>
-    <Country/>
+    <h1>This is Home Page</h1>
     </>
   )
 }

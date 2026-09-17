@@ -2,7 +2,10 @@ import React from 'react'
 
 const Contact = () => {
   return (
-    <div>Contact</div>
+    <>
+    <h2>Contact Us</h2>
+    <h3>Mobile no 998467458768</h3>
+    </>
   )
 }
 
