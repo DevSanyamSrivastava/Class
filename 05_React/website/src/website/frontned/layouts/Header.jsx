@@ -1,5 +1,5 @@
 import React from 'react';
-
+import { Link } from 'react-router-dom';
 export default function Header() {
   return (
     <nav className="sticky top-0 z-50 bg-white border-b border-gray-100 shadow-sm">
@@ -16,10 +16,11 @@ export default function Header() {
 
         
           <div className="flex flex-col items-center space-y-3 md:space-y-0 md:flex-row md:space-x-8 text-center w-full md:w-auto">
-            <a href="#home" className="text-gray-600 hover:text-indigo-600 text-sm font-medium transition-colors w-full md:w-auto py-1">Home</a>
-            <a href="#features" className="text-gray-600 hover:text-indigo-600 text-sm font-medium transition-colors w-full md:w-auto py-1">Features</a>
-            <a href="#pricing" className="text-gray-600 hover:text-indigo-600 text-sm font-medium transition-colors w-full md:w-auto py-1">Pricing</a>
-            <a href="#contact" className="text-gray-600 hover:text-indigo-600 text-sm font-medium transition-colors w-full md:w-auto py-1">Contact</a>
+            <Link to='/' className="text-gray-600 hover:text-indigo-600 text-sm font-medium transition-colors w-full md:w-auto py-1">Home</Link>
+            <Link to="/about-us" className="text-gray-600 hover:text-indigo-600 text-sm font-medium transition-colors w-full md:w-auto py-1">About</Link>
+            <Link to='/pricing' className="text-gray-600 hover:text-indigo-600 text-sm font-medium transition-colors w-full md:w-auto py-1">Pricing</Link>
+            <Link to='/gallery' className="text-gray-600 hover:text-indigo-600 text-sm font-medium transition-colors w-full md:w-auto py-1">Gallery</Link>
+            <Link href="#contact" className="text-gray-600 hover:text-indigo-600 text-sm font-medium transition-colors w-full md:w-auto py-1">Contact</Link>
           </div>
 
         </div>
