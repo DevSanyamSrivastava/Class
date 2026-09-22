@@ -20,7 +20,7 @@ export default function Header() {
             <Link to="/about-us" className="text-gray-600 hover:text-indigo-600 text-sm font-medium transition-colors w-full md:w-auto py-1">About</Link>
             <Link to='/pricing' className="text-gray-600 hover:text-indigo-600 text-sm font-medium transition-colors w-full md:w-auto py-1">Pricing</Link>
             <Link to='/gallery' className="text-gray-600 hover:text-indigo-600 text-sm font-medium transition-colors w-full md:w-auto py-1">Gallery</Link>
-            <Link href="" className="text-gray-600 hover:text-indigo-600 text-sm font-medium transition-colors w-full md:w-auto py-1">Contact</Link>
+            <Link to='/student' className="text-gray-600 hover:text-indigo-600 text-sm font-medium transition-colors w-full md:w-auto py-1">Student</Link>
           </div>
 
         </div>

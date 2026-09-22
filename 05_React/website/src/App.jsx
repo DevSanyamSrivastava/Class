@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { StrictMode } from 'react'
+
 import './App.css'
 import Layouts from './website/frontned/layouts/Layouts'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
@@ -8,11 +8,12 @@ import AboutUs from './website/frontned/AboutUs'
 import Pricing from './website/frontned/Pricing'
 import Gallery from './website/frontned/Gallery'
 import Details from './website/frontned/Details'
+import Student from './website/frontned/Student'
 function App() {
 
 
   return (
-    <StrictMode>
+  
     <BrowserRouter>
         <Routes>
           <Route path='/' element={<Layouts/>}>
@@ -20,12 +21,13 @@ function App() {
                 <Route path='/about-us' element={<AboutUs/>} />
                 <Route path='/pricing' element={<Pricing/>} />
                 <Route path='/gallery' element={<Gallery/>} />
+                <Route path='/student' element={<Student/>} />
                 <Route path='/details/:id' element={<Details/>} />
                 
           </Route>
         </Routes>
     </BrowserRouter>
-    </StrictMode>
+  
   )
 }
 

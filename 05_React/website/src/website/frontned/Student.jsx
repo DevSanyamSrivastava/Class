@@ -16,8 +16,8 @@ const Student = () => {
           <p>{student.name}</p>
           <p>{student.class}</p>
           {/* Added text inside the Link so it is clickable */}
-          <Link to={`/details/${student.id}`}>View Details</Link>
-          
+          <Link to={`/details/${student.id}`} className='g-gray-200 text-gray-800 hover:bg-gray-300'>View Details</Link>
+
         </div>
       ))}
     </div>
