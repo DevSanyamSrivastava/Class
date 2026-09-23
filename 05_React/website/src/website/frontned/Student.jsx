@@ -1,4 +1,4 @@
-import React from 'react';
+import React  from 'react';
 import { Link } from 'react-router-dom';
 
 const Student = () => {
@@ -16,7 +16,8 @@ const Student = () => {
           <p>{student.name}</p>
           <p>{student.class}</p>
           {/* Added text inside the Link so it is clickable */}
-          <Link to={`/details/${student.id}`} className='g-gray-200 text-gray-800 hover:bg-gray-300'>View Details</Link>
+          {/* <Link to={`/details/${student.id}`} className='g-gray-200 text-gray-800 hover:bg-gray-300'>View Details</Link> */}
+          <button className='bg-indigo-600 hover:bg-indigo-700 text-white font-semibold py-2 px-4 rounded-lg shadow transition duration-200'>View Details</button>
 
         </div>
       ))}
