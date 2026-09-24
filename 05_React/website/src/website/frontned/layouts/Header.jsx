@@ -1,30 +1,72 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-export default function Header() {
+import { useState } from "react";
+import { NavLink } from "react-router-dom";
+import { Menu, X, Phone, Landmark} from "lucide-react";
+
+const Header = () => {
+  const [isOpen, setIsOpen] = useState(false);
+
+  const linkStyle = ({ isActive }) =>
+    isActive
+      ? "font-semibold text-secondary"
+      : "transition hover:text-secondary";
+
   return (
-    <nav className="sticky top-0 z-50 bg-white border-b border-gray-100 shadow-sm">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      
-        <div className="flex flex-col md:flex-row md:justify-between md:h-16 items-center py-4 md:py-0">
-          
-        
-          <div className="flex-shrink-0 mb-4 md:mb-0">
-            <span className="text-xl font-bold text-indigo-600 cursor-pointer">
-              BrandLogo
-            </span>
-          </div>
+    <nav className="  ">
+      <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4">
 
+        {/* Logo */}
+        <NavLink to="/" className="text-2xl font-bold">
+          ABC School
+        </NavLink>
+        {/* Desktop Menu */}
+        <div className="hidden items-center gap-6 md:flex">
+          <NavLink to="/" className={linkStyle}>
+            Home
         
-          <div className="flex flex-col items-center space-y-3 md:space-y-0 md:flex-row md:space-x-8 text-center w-full md:w-auto">
-            <Link to='/' className="text-gray-600 hover:text-indigo-600 text-sm font-medium transition-colors w-full md:w-auto py-1">Home</Link>
-            <Link to="/about-us" className="text-gray-600 hover:text-indigo-600 text-sm font-medium transition-colors w-full md:w-auto py-1">About</Link>
-            <Link to='/pricing' className="text-gray-600 hover:text-indigo-600 text-sm font-medium transition-colors w-full md:w-auto py-1">Pricing</Link>
-            <Link to='/gallery' className="text-gray-600 hover:text-indigo-600 text-sm font-medium transition-colors w-full md:w-auto py-1">Gallery</Link>
-            <Link to='/student' className="text-gray-600 hover:text-indigo-600 text-sm font-medium transition-colors w-full md:w-auto py-1">Student</Link>
-          </div>
-
+          </NavLink>
+          <NavLink to="/about-us" className={linkStyle}>
+            About 
+          </NavLink>
+         
         </div>
+
+        {/* Mobile Menu Button */}
+        <button
+          onClick={() => setIsOpen(!isOpen)}
+          className="md:hidden"
+          aria-label="Toggle menu"
+        >
+          {isOpen ? <X size={26} /> : <Menu size={26} />}
+        </button>
       </div>
+
+      {/* Mobile Menu */}
+      {isOpen && (
+        <div className="border-t border-white/20 px-6 w-50 py-4 md:hidden">
+          <div className="flex flex-col gap-4">
+
+            <NavLink
+              to="/"
+              onClick={() => setIsOpen(false)}
+              className={linkStyle}
+            >
+              Home
+            </NavLink>
+            <NavLink
+              to="/about-us"
+              onClick={() => setIsOpen(false)}
+              className={linkStyle}
+            >
+              About 
+            </NavLink>
+
+ 
+
+          </div>
+        </div>
+      )}
     </nav>
   );
-}
+};
+
+export default Header;
